@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct AntistressView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var gameState: GameState
@@ -129,9 +130,4 @@ private struct GameResultsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 32)
     }
-}
-
-#Preview {
-    AntistressView()
-        .environmentObject(GameState())
 }

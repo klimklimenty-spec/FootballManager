@@ -8,8 +8,12 @@ struct StartView: View {
     
     var body: some View {
         if hasSeenOnboarding {
-            FootballFieldView()
-                .environmentObject(gameState)
+            if #available(iOS 16.0, *) {
+                FootballFieldView()
+                    .environmentObject(gameState)
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
             OnboardingView(hasSeenOnboarding: $hasSeenOnboarding)
         }

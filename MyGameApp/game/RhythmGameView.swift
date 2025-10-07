@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct RhythmGameView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var gameState: GameState
@@ -117,48 +118,52 @@ private struct RhythmBarView: View {
     let hitZoneRange: ClosedRange<CGFloat>
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack(spacing: 12) {
-                HStack(spacing: 0) {
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(width: geometry.size.width * 0.30)
+        if #available(iOS 15.0, *) {
+            GeometryReader { geometry in
+                VStack(spacing: 12) {
+                    HStack(spacing: 0) {
+                        Rectangle()
+                            .fill(Color.black)
+                            .frame(width: geometry.size.width * 0.30)
+                        
+                        Rectangle()
+                            .fill(Color.colorGray)
+                            .frame(width: geometry.size.width * 0.15)
+                        
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(width: geometry.size.width * 0.10)
+                        
+                        Rectangle()
+                            .fill(Color.colorGray)
+                            .frame(width: geometry.size.width * 0.15)
+                        
+                        Rectangle()
+                            .fill(Color.black)
+                            .frame(width: geometry.size.width * 0.30)
+                    }
+                    .frame(height: 20)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     Rectangle()
-                        .fill(Color.colorGray)
-                        .frame(width: geometry.size.width * 0.15)
-                    
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: geometry.size.width * 0.10)
-                    
-                    Rectangle()
-                        .fill(Color.colorGray)
-                        .frame(width: geometry.size.width * 0.15)
-                    
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(width: geometry.size.width * 0.30)
+                        .fill(Color.clear)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 16)
+                        .overlay(
+                            Image(.triangle)
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .offset(x: geometry.size.width * position - geometry.size.width/2)
+                        )
                 }
-                .frame(height: 20)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                
-                Rectangle()
-                    .fill(Color.clear)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 16)
-                    .overlay(
-                        Image(.triangle)
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .offset(x: geometry.size.width * position - geometry.size.width/2)
-                    )
+                .padding(.top, 30)
             }
-            .padding(.top, 30)
+            .padding(.horizontal, 24)
+            .frame(height: 100)
+            .background(Color.colorGray.opacity(0.3), in: .rect(cornerRadius: 10))
+        } else {
+            // Fallback on earlier versions
         }
-        .padding(.horizontal, 24)
-        .frame(height: 100)
-        .background(Color.colorGray.opacity(0.3), in: .rect(cornerRadius: 10))
     }
 }
 
@@ -218,9 +223,4 @@ private struct RhythmGameResultsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 32)
     }
-}
-
-#Preview {
-    RhythmGameView()
-        .environmentObject(GameState())
 }

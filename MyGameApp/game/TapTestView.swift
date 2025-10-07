@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct TapTestView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var gameState: GameState
@@ -154,9 +155,4 @@ private struct TapTestViewResultsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 32)
     }
-}
-
-#Preview {
-    TapTestView()
-        .environmentObject(GameState())
 }

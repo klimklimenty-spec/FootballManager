@@ -40,33 +40,41 @@ struct GameOverView: View {
                     .padding(20)
                     .frame(maxHeight: .infinity)
                 } else {
-                    Image(.gameOver)
-                        .resizable()
-                        .scaledToFit()
-                        .padding(20)
-                        .overlay(alignment: .top) {
-                            Text(reason?.message ?? "")
-                                .font(.poppins(size: 20, weight: .semiBold))
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 20)
-                                .padding(.top, 50)
-                        }
-                        .frame(maxHeight: .infinity)
+                    if #available(iOS 15.0, *) {
+                        Image(.gameOver)
+                            .resizable()
+                            .scaledToFit()
+                            .padding(20)
+                            .overlay(alignment: .top) {
+                                Text(reason?.message ?? "")
+                                    .font(.poppins(size: 20, weight: .semiBold))
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 50)
+                            }
+                            .frame(maxHeight: .infinity)
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
                 
                 Button {
                     backAction()
                 } label: {
-                    Text("Back to Menu")
-                        .font(.poppins(size: 20, weight: .semiBold))
-                        .foregroundColor(.black)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 56)
-                        .background {
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(Color.colorYellow)
-                        }
+                    if #available(iOS 15.0, *) {
+                        Text("Back to Menu")
+                            .font(.poppins(size: 20, weight: .semiBold))
+                            .foregroundColor(.black)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 56)
+                            .background {
+                                RoundedRectangle(cornerRadius: 16)
+                                    .fill(Color.colorYellow)
+                            }
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
                 .padding(20)
                 .frame(maxWidth: .infinity)

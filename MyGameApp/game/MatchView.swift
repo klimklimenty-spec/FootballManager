@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct MatchView: View {
     
     //MARK: - Properties
@@ -78,8 +79,3 @@ struct MatchView: View {
 }
 
 //MARK: - Preview
-
-#Preview {
-    MatchView()
-        .environmentObject(GameState())
-}

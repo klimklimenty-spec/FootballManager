@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 16.0, *)
 struct FootballFieldView: View {
     @EnvironmentObject private var gameState: GameState
     @AppStorage("balance") private var balance = 40
@@ -171,10 +172,7 @@ struct FootballFieldView: View {
     }
 }
 
-#Preview {
-    FootballFieldView()
-        .environmentObject(GameState())
-}
+
 
 extension View {
     func hideNavigationBar() -> some View {

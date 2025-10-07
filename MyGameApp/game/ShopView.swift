@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ShopView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = ShopViewModel()
@@ -17,73 +18,77 @@ struct ShopView: View {
                     dismiss()
                 }
                 
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text("Boosters")
+                if #available(iOS 16.0, *) {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Boosters")
+                                .font(.poppins(size: 20, weight: .bold))
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 20)
+                            
+                            VStack(spacing: 12) {
+                                ForEach(viewModel.boosters) { booster in
+                                    BoosterCardView(booster: booster) {
+                                        if balance >= booster.price {
+                                            balance -= booster.price
+                                            viewModel.buyBooster(booster)
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                        }
+                        .padding(.top, 20)
+                        
+                        Text("Players")
                             .font(.poppins(size: 20, weight: .bold))
                             .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
-                        VStack(spacing: 12) {
-                            ForEach(viewModel.boosters) { booster in
-                                BoosterCardView(booster: booster) {
-                                    if balance >= booster.price {
-                                        balance -= booster.price
-                                        viewModel.buyBooster(booster)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Pro")
+                                .font(.poppins(size: 14, weight: .regular))
+                                .foregroundColor(.colorYellow)
+                                .padding(.horizontal, 20)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 8) {
+                                    ForEach(viewModel.proPlayers) { player in
+                                        PlayerCardView(player: updatePlayerState(player)) {
+                                            handlePlayerAction(player)
+                                        }
                                     }
                                 }
+                                .padding(.horizontal, 20)
+                                .id(refreshView)
                             }
                         }
-                        .padding(.horizontal, 20)
-                    }
-                    .padding(.top, 20)
-                    
-                    Text("Players")
-                        .font(.poppins(size: 20, weight: .bold))
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                    
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Pro")
-                            .font(.poppins(size: 14, weight: .regular))
-                            .foregroundColor(.colorYellow)
-                            .padding(.horizontal, 20)
                         
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 8) {
-                                ForEach(viewModel.proPlayers) { player in
-                                    PlayerCardView(player: updatePlayerState(player)) {
-                                        handlePlayerAction(player)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Legend")
+                                .font(.poppins(size: 14, weight: .regular))
+                                .foregroundColor(.colorYellow)
+                                .padding(.horizontal, 20)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 8) {
+                                    ForEach(viewModel.legendPlayers) { player in
+                                        PlayerCardView(player: updatePlayerState(player)) {
+                                            handlePlayerAction(player)
+                                        }
                                     }
                                 }
+                                .padding(.horizontal, 20)
+                                .id(!refreshView)
                             }
-                            .padding(.horizontal, 20)
-                            .id(refreshView)
                         }
+                        .padding(.bottom, 8)
                     }
-                    
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Legend")
-                            .font(.poppins(size: 14, weight: .regular))
-                            .foregroundColor(.colorYellow)
-                            .padding(.horizontal, 20)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(spacing: 8) {
-                                ForEach(viewModel.legendPlayers) { player in
-                                    PlayerCardView(player: updatePlayerState(player)) {
-                                        handlePlayerAction(player)
-                                    }
-                                }
-                            }
-                            .padding(.horizontal, 20)
-                            .id(!refreshView)
-                        }
-                    }
-                    .padding(.bottom, 8)
+                    .scrollIndicators(.hidden)
+                } else {
+                    // Fallback on earlier versions
                 }
-                .scrollIndicators(.hidden)
             }
             .hideNavigationBar()
         }
@@ -161,9 +166,4 @@ struct ShopView: View {
         let statsViewModel = SettingsViewModel()
         statsViewModel.incrementPlayerBought(isLegend: isLegend)
     }
-}
-
-#Preview {
-    ShopView()
-        .environmentObject(GameState())
 }

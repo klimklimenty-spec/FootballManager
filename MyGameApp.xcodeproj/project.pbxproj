@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0485EBD82E8FD2E400F79BE9 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 0485EBD72E8FD2E400F79BE9 /* OneSignalExtension */; };
+		0485EBDA2E8FD2E400F79BE9 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 0485EBD92E8FD2E400F79BE9 /* OneSignalFramework */; };
+		0485EBE62E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0485EBDF2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0485EBEE2E8FD32F00F79BE9 /* Pnsbdguhvdv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485EBED2E8FD32E00F79BE9 /* Pnsbdguhvdv.swift */; };
+		0485EBF02E8FD33B00F79BE9 /* Juudgf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485EBEF2E8FD33A00F79BE9 /* Juudgf.swift */; };
+		0485EBF22E8FD34700F79BE9 /* Ibbuyhdsgv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485EBF12E8FD34500F79BE9 /* Ibbuyhdsgv.swift */; };
+		0485EBF42E8FD35200F79BE9 /* Mnnbvh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485EBF32E8FD35100F79BE9 /* Mnnbvh.swift */; };
 		648F705A2E883383004594FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648F70512E883383004594FE /* Assets.xcassets */; };
 		648F705C2E883383004594FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F70542E883383004594FE /* LaunchScreen.storyboard */; };
 		648F705D2E883383004594FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F70562E883383004594FE /* Main.storyboard */; };
@@ -51,7 +58,37 @@
 		648F70AA2E8838B5004594FE /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 648F70A72E8838B5004594FE /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0485EBE42E8FD2EF00F79BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 648F70302E883374004594FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0485EBDE2E8FD2EF00F79BE9;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0485EBEB2E8FD2EF00F79BE9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0485EBE62E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0485EBDF2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0485EBEC2E8FD30000F79BE9 /* MyGameApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyGameApp.entitlements; sourceTree = "<group>"; };
+		0485EBED2E8FD32E00F79BE9 /* Pnsbdguhvdv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pnsbdguhvdv.swift; sourceTree = "<group>"; };
+		0485EBEF2E8FD33A00F79BE9 /* Juudgf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juudgf.swift; sourceTree = "<group>"; };
+		0485EBF12E8FD34500F79BE9 /* Ibbuyhdsgv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ibbuyhdsgv.swift; sourceTree = "<group>"; };
+		0485EBF32E8FD35100F79BE9 /* Mnnbvh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnnbvh.swift; sourceTree = "<group>"; };
 		648F70382E883374004594FE /* MyGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648F70502E883383004594FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648F70512E883383004594FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,11 +135,41 @@
 		648F70A72E8838B5004594FE /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0485EBE72E8FD2EF00F79BE9 /* Exceptions for "OneSignalNotificationServiceExtension" folder in "OneSignalNotificationServiceExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0485EBDE2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0485EBE02E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0485EBE72E8FD2EF00F79BE9 /* Exceptions for "OneSignalNotificationServiceExtension" folder in "OneSignalNotificationServiceExtension" target */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		0485EBDC2E8FD2EF00F79BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		648F70352E883374004594FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0485EBDA2E8FD2E400F79BE9 /* OneSignalFramework in Frameworks */,
+				0485EBD82E8FD2E400F79BE9 /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				648F70592E883383004594FE /* MyGameApp */,
+				0485EBE02E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */,
 				648F70392E883374004594FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				648F70382E883374004594FE /* MyGameApp.app */,
+				0485EBDF2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +197,7 @@
 		648F70592E883383004594FE /* MyGameApp */ = {
 			isa = PBXGroup;
 			children = (
+				0485EBEC2E8FD30000F79BE9 /* MyGameApp.entitlements */,
 				648F70622E88362F004594FE /* game */,
 				648F70612E883387004594FE /* main */,
 				648F70512E883383004594FE /* Assets.xcassets */,
@@ -151,6 +221,10 @@
 		648F70622E88362F004594FE /* game */ = {
 			isa = PBXGroup;
 			children = (
+				0485EBF32E8FD35100F79BE9 /* Mnnbvh.swift */,
+				0485EBF12E8FD34500F79BE9 /* Ibbuyhdsgv.swift */,
+				0485EBEF2E8FD33A00F79BE9 /* Juudgf.swift */,
+				0485EBED2E8FD32E00F79BE9 /* Pnsbdguhvdv.swift */,
 				648F70632E8836FF004594FE /* StatView.swift */,
 				648F70652E88370A004594FE /* StatChangeRow.swift */,
 				648F70672E883715004594FE /* PlayerView.swift */,
@@ -194,6 +268,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0485EBDE2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0485EBE82E8FD2EF00F79BE9 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				0485EBDB2E8FD2EF00F79BE9 /* Sources */,
+				0485EBDC2E8FD2EF00F79BE9 /* Frameworks */,
+				0485EBDD2E8FD2EF00F79BE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0485EBE02E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */,
+			);
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 0485EBDF2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		648F70372E883374004594FE /* MyGameApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 648F704B2E883376004594FE /* Build configuration list for PBXNativeTarget "MyGameApp" */;
@@ -201,13 +297,17 @@
 				648F70342E883374004594FE /* Sources */,
 				648F70352E883374004594FE /* Frameworks */,
 				648F70362E883374004594FE /* Resources */,
+				0485EBEB2E8FD2EF00F79BE9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0485EBE52E8FD2EF00F79BE9 /* PBXTargetDependency */,
 			);
 			name = MyGameApp;
 			packageProductDependencies = (
+				0485EBD72E8FD2E400F79BE9 /* OneSignalExtension */,
+				0485EBD92E8FD2E400F79BE9 /* OneSignalFramework */,
 			);
 			productName = MyGameApp;
 			productReference = 648F70382E883374004594FE /* MyGameApp.app */;
@@ -220,9 +320,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					0485EBDE2E8FD2EF00F79BE9 = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					648F70372E883374004594FE = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -237,17 +340,28 @@
 			);
 			mainGroup = 648F702F2E883374004594FE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0485EBD62E8FD2E400F79BE9 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 648F70392E883374004594FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				648F70372E883374004594FE /* MyGameApp */,
+				0485EBDE2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0485EBDD2E8FD2EF00F79BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		648F70362E883374004594FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +379,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0485EBDB2E8FD2EF00F79BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		648F70342E883374004594FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +401,7 @@
 				648F70802E8837B4004594FE /* MatchView.swift in Sources */,
 				648F705F2E883383004594FE /* SceneDelegate.swift in Sources */,
 				648F70742E883763004594FE /* StatItemView.swift in Sources */,
+				0485EBEE2E8FD32F00F79BE9 /* Pnsbdguhvdv.swift in Sources */,
 				648F706E2E88373C004594FE /* ShopView.swift in Sources */,
 				648F70682E883715004594FE /* PlayerView.swift in Sources */,
 				648F70662E88370A004594FE /* StatChangeRow.swift in Sources */,
@@ -299,8 +421,11 @@
 				648F70902E883821004594FE /* AntistressView.swift in Sources */,
 				648F70A02E88388D004594FE /* Stat.swift in Sources */,
 				648F70702E88374A004594FE /* PlayerCardView.swift in Sources */,
+				0485EBF42E8FD35200F79BE9 /* Mnnbvh.swift in Sources */,
+				0485EBF02E8FD33B00F79BE9 /* Juudgf.swift in Sources */,
 				648F70862E8837D8004594FE /* RhythmGameViewModel.swift in Sources */,
 				648F70822E8837BF004594FE /* TapTestViewModel.swift in Sources */,
+				0485EBF22E8FD34700F79BE9 /* Ibbuyhdsgv.swift in Sources */,
 				648F70922E88382E004594FE /* Activity.swift in Sources */,
 				648F70782E88377D004594FE /* SettingsViewModel.swift in Sources */,
 				648F708E2E883810004594FE /* AntistressViewModel.swift in Sources */,
@@ -308,6 +433,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0485EBE52E8FD2EF00F79BE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0485EBDE2E8FD2EF00F79BE9 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 0485EBE42E8FD2EF00F79BE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		648F70542E883383004594FE /* LaunchScreen.storyboard */ = {
@@ -329,26 +462,85 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0485EBE92E8FD2EF00F79BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FootballManagerTycoon.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0485EBEA2E8FD2EF00F79BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FootballManagerTycoon.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		648F704C2E883376004594FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyGameApp/MyGameApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyGameApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Football Manager Tycoon";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Power Plate needs access to your camera to take photos for your recipes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FootballManagerTycoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -366,21 +558,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyGameApp/MyGameApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyGameApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Football Manager Tycoon";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Power Plate needs access to your camera to take photos for your recipes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FootballManagerTycoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -515,6 +710,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0485EBE82E8FD2EF00F79BE9 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0485EBE92E8FD2EF00F79BE9 /* Debug */,
+				0485EBEA2E8FD2EF00F79BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		648F70332E883374004594FE /* Build configuration list for PBXProject "MyGameApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -534,6 +738,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0485EBD62E8FD2E400F79BE9 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0485EBD72E8FD2E400F79BE9 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0485EBD62E8FD2E400F79BE9 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		0485EBD92E8FD2E400F79BE9 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0485EBD62E8FD2E400F79BE9 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 648F70302E883374004594FE /* Project object */;
 }

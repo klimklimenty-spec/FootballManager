@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct MatchTimingView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var gameState: GameState
@@ -163,9 +164,4 @@ private struct MatchTimingResultsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal, 32)
     }
-}
-
-#Preview {
-    MatchTimingView()
-        .environmentObject(GameState())
 }

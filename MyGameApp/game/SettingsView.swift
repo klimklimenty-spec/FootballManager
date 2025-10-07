@@ -2,6 +2,7 @@ import SwiftUI
 import AVKit
 import StoreKit
 
+@available(iOS 15.0, *)
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = SettingsViewModel()
@@ -141,9 +142,6 @@ struct SettingsView: View {
     }
 }
 
-#Preview {
-    SettingsView()
-}
 
 
 class SoundManager {

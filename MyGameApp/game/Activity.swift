@@ -54,10 +54,26 @@ enum Activity: CaseIterable {
     
     @ViewBuilder func view() -> some View {
         switch self {
-        case .tapTest: TapTestView()
-        case .rhythmGame: RhythmGameView()
-        case .antistress: AntistressView()
-        case .matchTiming: MatchTimingView()
+        case .tapTest: if #available(iOS 15.0, *) {
+            TapTestView()
+        } else {
+            // Fallback on earlier versions
+        }
+        case .rhythmGame: if #available(iOS 15.0, *) {
+            RhythmGameView()
+        } else {
+            // Fallback on earlier versions
+        }
+        case .antistress: if #available(iOS 15.0, *) {
+            AntistressView()
+        } else {
+            // Fallback on earlier versions
+        }
+        case .matchTiming: if #available(iOS 15.0, *) {
+            MatchTimingView()
+        } else {
+            // Fallback on earlier versions
+        }
         }
     }
 }

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct ActivitiesView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -29,8 +30,4 @@ struct ActivitiesView: View {
         }
         .hideNavigationBar()
     }
-}
-
-#Preview {
-    ActivitiesView()
 }
